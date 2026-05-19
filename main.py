@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-
+from utils import get_restaurants
 
 app = FastAPI(
     title="Restaurant API",
@@ -10,7 +10,7 @@ app = FastAPI(
 
 @app.get("/restaurants")
 def restaurants(city: str):
-    return {"message": "Temporarily not implemented"}
+    return get_restaurants(city)
 
 
 @app.get("/")
