@@ -13,7 +13,9 @@
 ## Технології
 
 
-- Мова програмування: Python 3.12
+- Мова програмування: Python 3.14
+
+- Стек: Fast Api
 
 - IDE: Visual Studio Code 1.110
 
@@ -29,7 +31,9 @@
 
 git clone https://github.com/timur-dev-hub/bse-lr1-Skiba.git
 
-cd project
+cd bse-lr1-Skiba
+
+pip install requirements.txt
 
 python main.py
 
