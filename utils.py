@@ -2,5 +2,5 @@
 #Додай функцію get_restaurants для отримання ресторанів за містом. 
 #Вона повинна приймати параметр city і повертати список ресторанів у цьому місті. 
 #Поки що можна повернути тимчасове повідомлення, що ця функція ще не реалізована.
-def get_restaurants(city: str) -> dict:
+def get_restaurants(city: str):
     return {"message": "Temporarily not implemented"}
