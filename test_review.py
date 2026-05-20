@@ -19,7 +19,7 @@ def test_validate_valid_review():
     # Act
     result = review.validate()
     # Assert
-    assert result == True  # EP: позитивний — всі поля коректні
+    assert result # EP: позитивний — всі поля коректні
 
 
 def test_validate_score_minimum():
@@ -28,7 +28,7 @@ def test_validate_score_minimum():
     # Act
     result = review.validate()
     # Assert
-    assert result == True  # BVA: межа знизу — score=1 є допустимим
+    assert result # BVA: межа знизу — score=1 є допустимим
 
 
 def test_validate_score_maximum():
@@ -37,7 +37,7 @@ def test_validate_score_maximum():
     # Act
     result = review.validate()
     # Assert
-    assert result == True  # BVA: межа зверху — score=5 є допустимим
+    assert result # BVA: межа зверху — score=5 є допустимим
 
 
 def test_validate_score_below_minimum():
@@ -94,7 +94,7 @@ def test_validate_valid_source_yelp():
     # Act
     result = review.validate()
     # Assert
-    assert result == True  # EP: позитивний — "yelp" є допустимим джерелом
+    assert result # EP: позитивний — "yelp" є допустимим джерелом
 
 
 # Тести методу is_recent()
@@ -105,7 +105,7 @@ def test_is_recent_new_review():
     # Act
     result = review.is_recent(days=30)
     # Assert
-    assert result == True  # EP: позитивний — свіжий відгук
+    assert result  # EP: позитивний — свіжий відгук
 
 
 def test_is_recent_old_review():
@@ -114,7 +114,7 @@ def test_is_recent_old_review():
     # Act
     result = review.is_recent(days=30)
     # Assert
-    assert result == False  # BVA: days_ago=31 > межі 30 → не свіжий
+    assert not result  # BVA: days_ago=31 > межі 30 → не свіжий
 
 
 def test_is_recent_exactly_on_boundary():
@@ -123,7 +123,7 @@ def test_is_recent_exactly_on_boundary():
     # Act
     result = review.is_recent(days=30)
     # Assert
-    assert result == True  # BVA: межа — рівно 30 днів → ще свіжий
+    assert result  # BVA: межа — рівно 30 днів → ще свіжий
 
 
 def test_is_recent_negative_days():
@@ -161,4 +161,3 @@ def test_to_dict_returns_correct_values():
     assert result["source"] == "tripadvisor"
     assert result["createdAt"] == "2024-06-15T12:00:00"  # EP: позитивний — значення коректні
 
-    
