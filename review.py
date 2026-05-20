@@ -21,7 +21,7 @@ class Review:
             raise ValueError(f"Source must be one of {self.VALID_SOURCES}")
         return True
 
-    def is_recent(self, days: int = 90) -> bool:
+    def is_recent(self, days: int = 30) -> bool:
         """Повертає True якщо відгук не старший за days днів."""
         if days < 0:
             raise ValueError("Days cannot be negative")
