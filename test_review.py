@@ -161,4 +161,6 @@ def test_to_dict_returns_correct_values():
     assert result["source"] == "tripadvisor"
     assert result["createdAt"] == "2024-06-15T12:00:00"  # EP: позитивний — значення коректні
 
-    
+
+
+
