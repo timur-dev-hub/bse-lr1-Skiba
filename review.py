@@ -2,7 +2,7 @@ from datetime import datetime
 
 
 class Review:
-    VALID_SOURCES = {"google", "yelp"}
+    VALID_SOURCES = {"google", "yelp", "tripadvisor"}
 
     def __init__(self, review_id: int, created_at: datetime, score: int, author_name: str, source: str):
         self.review_id = review_id
