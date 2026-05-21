@@ -15,7 +15,7 @@ def restaurants(city: str):
 
 @app.get("/")
 def root():
-    return {"message": "Service is running"}
+    return {"message": "Service is running. Welcome to the Rest API!\nProject by: Skiba Timur ПЗПІз-25-1"}
 
 if __name__ == "__main__":
     import uvicorn
