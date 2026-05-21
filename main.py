@@ -12,6 +12,10 @@ app = FastAPI(
 def restaurants(city: str):
     return get_restaurants(city)
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 
 @app.get("/")
 def root():
